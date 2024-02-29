@@ -1,7 +1,8 @@
 {
     "background": {
         "scripts": [
-            "background.js"
+            "background.js",
+            "browser-polyfill.js"
         ]
     },
     "browser_action": {
@@ -16,7 +17,7 @@
     //   {
     //     "exclude_matches": ["*://developer.mozilla.org/*"],
     //     "matches": ["*://*.mozilla.org/*"],
-    //     "js": ["borderify.js"]
+    //     "js": ["borderify.js", "browser-polyfill.js"]
     //   }
     // ],
     "description": "…",
