@@ -29,8 +29,7 @@
     "name": "ExidySorcererAI",
     "permissions": [
         "webNavigation",
-        "tab",
-        "activetab",
+        "activeTab",
         "tabs"
     ],
     "version": "0.1"
