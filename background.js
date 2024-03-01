@@ -11,3 +11,11 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
     browser.tabs.update(id, { url: newSearch });
 });
+
+browser.webNavigation.onCompleted.addListener((details) => {
+    let tabId = details.tabId;
+    let url = details.url;
+    if (!url.includes("bing.com/search")) return;
+    browser.tabs.executeScript(tabId, { code: 'alert("Ewww you use bing!");' });
+  });
+  

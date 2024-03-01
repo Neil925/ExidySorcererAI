@@ -29,6 +29,8 @@
     "name": "ExidySorcererAI",
     "permissions": [
         "webNavigation",
+        "webRequest",
+        "<all_urls>",
         "activeTab",
         "tabs"
     ],
