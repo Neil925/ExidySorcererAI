@@ -1,5 +1,6 @@
 let id = -1;
 
+// Google Bing Redirect
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (id == tabId || !tab.url?.includes("google.com/search"))
         return;
@@ -12,10 +13,12 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     browser.tabs.update(id, { url: newSearch });
 });
 
+// Bing User Alert 🤮
 browser.webNavigation.onCompleted.addListener((details) => {
     let tabId = details.tabId;
     let url = details.url;
-    if (!url.includes("bing.com/search")) return;
-    browser.tabs.executeScript(tabId, { code: 'alert("Ewww you use bing!");' });
+    if (!url.includes("bing.com")) 
+        return;
+    browser.tabs.executeScript(tabId, { code: 'alert("Ewww you use bing! 🤮");' });
   });
   
