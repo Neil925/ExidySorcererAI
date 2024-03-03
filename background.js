@@ -1,13 +1,30 @@
-let id = -1;
+async function main() {
+    const EventTypes = (await import("./variables.js")).EventTypes;
+    const process = (await import("./events/base-handler.js")).default;
 
-browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (id == tabId || !tab.url?.includes("google.com/search"))
-        return;
+    browser.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
+        let event = {
+            type: EventTypes.tabUpdate,
+            tabId,
+            changeInfo,
+            tab
+        }
+    
+        process(event);
+    });
+    
+    browser.webNavigation.onCompleted.addListener(async (details) => {
+        let event = {
+            type: EventTypes.webNavigation,
+            details
+        }
+    
+        process(event);
+    });
 
-    id = tabId;
+    setInterval(() => {    
+        process({ type: EventTypes.interval});
+    }, 1000 * 60);
+}
 
-    let splitSearch = tab.url.split("/search");
-    let newSearch = "https://www.bing.com/search/" + splitSearch[1];
-
-    browser.tabs.update(id, { url: newSearch });
-});
+main();

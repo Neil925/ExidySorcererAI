@@ -1,8 +1,7 @@
 {
     "background": {
         "scripts": [
-            "background.js",
-            "browser-polyfill.js"
+            "background.js"
         ]
     },
     "browser_action": {
@@ -29,6 +28,8 @@
     "name": "ExidySorcererAI",
     "permissions": [
         "webNavigation",
+        "webRequest",
+        "<all_urls>",
         "activeTab",
         "tabs"
     ],
