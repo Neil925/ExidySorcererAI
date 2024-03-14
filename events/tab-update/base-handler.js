@@ -1,5 +1,6 @@
 const tabUpdateEventFiles = [
-    "go-to-bing"
+    "go-to-bing",
+    "disable-css"
 ];
 
 let tabUpdateEvents = [];
