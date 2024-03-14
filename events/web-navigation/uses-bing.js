@@ -1,5 +1,5 @@
 export default {
-    porbability: 0,
+    porbability: .8,
     runForUrls: ["bing.com"],
     excemptUrls: [],
     preventOtherEvents: false,

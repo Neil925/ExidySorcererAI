@@ -1,5 +1,5 @@
 export default {
-    porbability: 1,
+    porbability: .15,
     preventOtherEvents: true,
     //Either loading or complete
     stage: "loading",

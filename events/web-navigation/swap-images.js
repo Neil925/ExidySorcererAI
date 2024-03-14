@@ -1,5 +1,5 @@
 export default {
-    porbability: 1,
+    porbability: .1,
     runForUrls: ["<all>"],
     excemptUrls: [],
     preventOtherEvents: false,
