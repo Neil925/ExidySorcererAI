@@ -1,4 +1,4 @@
-const tabUpdateEventFiles = [];
+const tabUpdateEventFiles = ["blue-screen"];
 
 let tabUpdateEvents = [];
 

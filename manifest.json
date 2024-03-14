@@ -12,13 +12,16 @@
         "default_title": "Exidy Sorcerer AI",
         "default_popup": "popup/popup.html"
     },
-    // "content_scripts": [
-    //   {
-    //     "exclude_matches": ["*://developer.mozilla.org/*"],
-    //     "matches": ["*://*.mozilla.org/*"],
-    //     "js": ["borderify.js", "browser-polyfill.js"]
-    //   }
-    // ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
     "description": "…",
     "icons": {
         "48": "media/sorcerer-48.png",
@@ -31,7 +34,8 @@
         "webRequest",
         "<all_urls>",
         "activeTab",
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "version": "0.1"
 }
