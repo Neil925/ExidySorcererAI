@@ -1,6 +1,7 @@
 const tabUpdateEventFiles = [
     "uses-bing",
-    "shake-elements"
+    "shake-elements",
+    "swap-images"
 ];
 
 let tabUpdateEvents = [];

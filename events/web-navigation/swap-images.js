@@ -1,5 +1,5 @@
 export default {
-    porbability: 0,
+    porbability: 1,
     runForUrls: ["<all>"],
     excemptUrls: [],
     preventOtherEvents: false,
@@ -7,6 +7,7 @@ export default {
     *  @param {import("webextension-polyfill").WebNavigation.OnCompletedDetailsType} details
     */
     execute: async (details) => {
-        await browser.tabs.executeScript(details.tabId, {file: "../../scriplets/shakeElements.js"});
+        console.log("Test");
+        await browser.tabs.executeScript(details.tabId, {file: "../../scriplets/swapImages.js"});
     }
 }
