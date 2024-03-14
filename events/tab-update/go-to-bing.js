@@ -1,7 +1,7 @@
 let id = -1;
 
 export default {
-    porbability: 1,
+    porbability: 0,
     preventOtherEvents: true,
     //Either loading or complete
     stage: "loading",
