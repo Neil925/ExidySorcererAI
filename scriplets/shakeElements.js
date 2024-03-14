@@ -1,4 +1,3 @@
-console.log("Test");
 function main() {
     createShakeAnimationStyle();
     shake(document.body);

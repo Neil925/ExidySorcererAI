@@ -2,7 +2,6 @@ let flag = false;
 
 setInterval(async () => {
     let { bsof } = await browser.storage.local.get("bsof");
-    console.log(`BSOF: ${bsof}`);
     flag = bsof;
 }, 3000);
 
