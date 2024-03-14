@@ -14,10 +14,10 @@ export default {
     * @param {import("webextension-polyfill").Tabs.Tab} tab
     */
     execute: async (tabId, changeInfo, tab) => {
+
         if (changeInfo.url == undefined) return;
 
-        if (tabId == id)
-            return;
+        if (tabId == id) return;
 
         console.debug(changeInfo);
 
